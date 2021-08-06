@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
+    <title>Calculadora de nafta</title>
+</head>
+<body>
+    <h1>calculadora de Nafta</h1>
+
+<form onsubmit="calculo(); return false" >
+        <label for="Rendimiento">Rendimiento</label>
+    <input type="number" id="rendimiento"></input>
+    <br>
+    <label for="kmARecorrer">Km a recorrer en (Km)</label>
+    <input type="number" id="kmARecorrer"></input>
+    <br>
+    <label for="tipo">Tipo de combustible</label>
+<select id="tipo" name="tipoC">
+  <option value="65.81">Nafta Super 95</option>
+  <option value="67.74">Nafta Premium 97</option>
+  <option value="67.87"> Gasoil 10-S</option>
+  <option value="45.70">Gasoil 50-S</option>
+</select>
+<br>
+<button type="button" onclick="calculo()">Enviar</button>
+</form>
+<p>el costo total sera: <p id="result"></p></p>
+
+<script src="script.js"></script>
+</body>
+</html>
