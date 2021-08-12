@@ -7,29 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <LINK REL=StyleSheet HREF="docs/style.css" TYPE="text/css" MEDIA=screen>
     <title>Calculadora de nafta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
-<body>
-    <h1>calculadora de Nafta</h1>
+<body class="bg-success">
+    <div class="container">
+    <h1>Calculadora de Nafta</h1>
 
-<form onsubmit="calculo(); return false" >
-        <label for="Rendimiento">Rendimiento</label>
-    <input type="number" id="rendimiento"></input>
-    <br>
-    <label for="kmARecorrer">Km a recorrer en (Km)</label>
-    <input type="number" id="kmARecorrer"></input>
-    <br>
-    <label for="tipo">Tipo de combustible</label>
-<select id="tipo" name="tipoC">
-  <option value="65.81">Nafta Super 95</option>
+<form onsubmit="calculo(); return false" class="row">
+        <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Rendimiento en Km</span>
+                <input type="number" id="rendimiento" class="form-control"  aria-describedby="basic-addon1" required>
+              </div>
+     <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2">Km a recorrer</span>
+                    <input type="number" id="kmARecorrer" class="form-control"  aria-describedby="basic-addon2">
+                  </div>
+                  <div class="input-group mb-3">
+<select id="tipo" name="tipoC" class="form-select form-select-lg" placeholder="Tipo de combustible">
+  <option selected value="65.81">Nafta Super 95</option>
   <option value="67.74">Nafta Premium 97</option>
   <option value="67.87"> Gasoil 10-S</option>
   <option value="45.70">Gasoil 50-S</option>
 </select>
-<br>
-<button type="button" onclick="calculo()">Enviar</button>
+</div>
 </form>
-<p>el costo total sera: <p id="result"></p></p>
+</div>
+<div class="container">
+<div class="row py-5">
+<button type="button" onclick="calculo()" class="btn btn-primary p-2">Enviar</button>
+
+
+<h5 class="text-center">el costo total sera: <h5 id="result" class="text-center"></h5></h5>
+</div>
+</div>
 
 <script src="docs/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 </html>
